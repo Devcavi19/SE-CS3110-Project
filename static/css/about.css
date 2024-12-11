@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.ourImage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourImage img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.aboutTxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.aboutTxt h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.aboutSentence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    text-align: center;
+    color: white;
+}
