@@ -22,6 +22,10 @@ def github():
 def signin():
     return render_template('signin.html')
 
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
 @app.route('/feedback')
 def feedback():
     return render_template('feedback.html')
