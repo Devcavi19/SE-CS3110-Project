@@ -1,0 +1,76 @@
+.login-container {
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin: auto;
+
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #fff;
+  height: 100%; /* Ensure full height of the viewport */
+
+}
+
+.login-field {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px 0;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: #fff; /* White text */
+  border: none;
+  outline: none;
+}
+/* Buttons */
+.signin-button, .signup-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 25px; /* Rounded edges */
+  padding: 12px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.signin-button:hover, .signup-button:hover {
+  background: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+.signup-button {
+  margin-top: 10px;
+  background: #28a745; /* Green button for signup */
+}
+
+.signup-button:hover {
+  background: #218838;
+}
+
+/* Optional heading style */
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: transparent;
+}
