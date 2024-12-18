@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +23,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ url_for('home') }}">
-                                    Home
-                                <span class="sr-only"></span>
-                                </a>
+                                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
                             </li>
 
                             <li class="nav-item">
@@ -52,6 +49,13 @@
     </header>
 
     <div class="registration-form">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
         <!-- Flashed Messages -->
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
@@ -64,6 +68,16 @@
         {% endwith %}
     
         <form action="/signup" method="POST">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        <form action="{{ url_for('signup') }}" method="POST">
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>
@@ -90,13 +104,37 @@
                 <input type="password" class="form-control item" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required style="margin-bottom: 5px;">
                 <p id="password-match-message" style="font-size: 12px; margin-top: 5px; padding-left: 20px;"></p>
             </div>
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
             <script>
                 document.getElementById('confirm-password').addEventListener('input', function() {
                     var password = document.getElementById('password').value;
                     var confirmPassword = this.value;
                     var message = document.getElementById('password-match-message');
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
                     if (password.length < 8) {
                         message.textContent = 'Password must be at least 8 characters';
                         message.style.color = 'red';
@@ -108,12 +146,36 @@
                         message.style.color = 'red';
                     }
                 });
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
                 document.querySelector('form').addEventListener('submit', function(event) {
                     var password = document.getElementById('password').value;
                     var confirmPassword = document.getElementById('confirm-password').value;
                     var message = document.getElementById('password-match-message');
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
                     if (password !== confirmPassword) {
                         event.preventDefault();
                         message.textContent = 'Passwords do not match';
@@ -121,14 +183,38 @@
                     }
                 });
             </script>
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
             <div class="form-group">
                 <button type="submit" class="btn btn-block submit">Submit</button>
             </div>
     
         </form>
     </div>
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
+>>>>>>> b1092f22f85289fa3a93ccdfb8eef1a8b5a26266
+>>>>>>> 5bbc9384632118126c9d55fd89405ebb4145fa2d
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </body>

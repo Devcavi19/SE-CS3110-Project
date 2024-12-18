@@ -26,6 +26,7 @@ class User(db.Model):
 @app.route('/')
 def index():
     return redirect(url_for('signin'))  # Redirect to sign-in page
+    return redirect(url_for('signin'))  # Redirect to sign-in page
 
 @app.route('/home')
 def home():
