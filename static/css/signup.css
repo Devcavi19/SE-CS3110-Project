@@ -41,6 +41,8 @@ body{
     border-radius: 20px;
     margin-bottom: 20px; /* Reduced from 25px */
     padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+
 }
 
 .registration-form .submit {
