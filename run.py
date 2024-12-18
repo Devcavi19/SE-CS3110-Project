@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
+import subprocess
 
 app = Flask(__name__)
 
@@ -66,6 +67,16 @@ def signup():
         return redirect(url_for('signin'))
 
     return render_template('signup.html')
+
+@app.route('/simulation')
+def simulation():
+    return render_template('simulation.html')
+
+@app.route('/run_simulation', methods=['POST'])
+def run_simulation():
+    # Run the simulation executable
+    result = subprocess.run(['./dist/simulation'], capture_output=True, text=True)
+    return jsonify({'output': result.stdout})
 
 @app.route('/feedback')
 def feedback():
