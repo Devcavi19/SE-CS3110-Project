@@ -18,28 +18,21 @@
                     <a class="navbar-brand" href="{{ url_for('home') }}">SOENG</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class=""> </span>
-                      </button>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ url_for('home') }}">
-                                    Home
-                                <span class="sr-only"></span>
-                                </a>
+                                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('about') }}">About</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="https://github.com/Devcavi19/SE-CS3110-Project" target="_blank">Github</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('feedback') }}">Feedback</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('signin') }}">SignIn</a>
                             </li>
@@ -51,17 +44,21 @@
     </header>
 
   <div class="login-container" style="top: 120px;">
+<<<<<<< HEAD
     <form action="/signin" method="POST">
+=======
+    <form action="{{ url_for('signin') }}" method="POST">
+>>>>>>> 22d1703718ea7680db647157ae0913586ce88388
       <div class="login-field">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required>
       </div>
       <div class="login-field">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
       </div>
-      <button class="signin-button" type="submit">Sign in</button required>
-      <button class="signup-button" type="button" onclick="signup()">Sign up</button required>
+      <button class="signin-button" type="submit">Sign in</button>
+      <button class="signup-button" type="button" onclick="signup()">Sign up</button>
     </form>
     {% if message %}
     <p style="color: red;">{{ message }}</p>
@@ -70,8 +67,7 @@
 
   <script>
     function signup() {
-        // Implement read bookings logic
-        window.location.href = "/signup";
+        window.location.href = "/signup";  // Redirects to the signup page
     }
   </script>
 
