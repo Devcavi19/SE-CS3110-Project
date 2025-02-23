@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-import subprocess
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Change to a secure key
@@ -90,12 +89,6 @@ def signup():
 @app.route('/simulation')
 def simulation():
     return render_template('simulation.html')
-
-@app.route('/run_simulation', methods=['POST'])
-def run_simulation():
-    # Run the simulation executable
-    result = subprocess.run(['./dist/simulation'], capture_output=True, text=True)
-    return jsonify({'output': result.stdout})
 
 if __name__ == '__main__':
     with app.app_context():
