@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="parent-container">
+    <div class="welcome" style="height: 300px;">
+        <h2>WELCOME TO</h2>
+        <h2>VEHICLE TRAFFIC SIMULATOR</h2>
+        <p>A project by Herald and Jester</p>
+        <a href="{{ url_for('simulation') }}" class="btn">Start Simulation</a>
+    </div>
+</div>
+{% endblock %}
