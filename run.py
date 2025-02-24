@@ -1,7 +1,6 @@
 """Main module to run the application."""
 
 import os
-import functools
 from functools import wraps
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -12,7 +11,6 @@ def create_app(config_name='default'):
     """Application factory function."""
     app = Flask(__name__)
     app.config.from_object(config[config_name])
-    
     # Initialize extensions
     db.init_app(app)
 
@@ -34,6 +32,11 @@ def create_app(config_name='default'):
     def home():
         fname = session.get('fname', 'User')
         return render_template('home.html', fname=fname)
+
+    @app.route('/simulation')
+    @login_required
+    def simulation():
+        return render_template('simulation.html')
 
     @app.route('/about')
     def about():
@@ -80,20 +83,13 @@ def create_app(config_name='default'):
             if User.query.filter_by(email=email).first():
                 flash('Email already exists', 'error')
                 return redirect(url_for('signup'))
-            
             hashed_password = generate_password_hash(password)
             new_user = User(fname=fname, lname=lname, email=email, password=hashed_password)
-            
             db.session.add(new_user)
             db.session.commit()
-            
             flash('Registration successful! Please sign in.', 'success')
             return redirect(url_for('signin'))
-            
         return render_template('signup.html')
-
-    @app.route('/simulation')
-    def simulation():
         return render_template('simulation.html')
 
     return app
