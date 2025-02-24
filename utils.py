@@ -1,7 +1,10 @@
 """Utilities module for the application."""
 
 from functools import wraps
-from flask import session, redirect, url_for
+try:
+    from flask import session, redirect, url_for
+except ImportError:
+    raise ImportError("Please install Flask using: pip install -r requirements.txt")
 
 def login_required(f):
     """Decorator to check if user is logged in."""
