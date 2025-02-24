@@ -55,14 +55,12 @@ def create_app(config_name='default'):
         if request.method == 'POST':
             email = request.form['email']
             password = request.form['password']
-            
             user = User.query.filter_by(email=email).first()
             if user and check_password_hash(user.password, password):
                 session['user_id'] = user.id
                 session['fname'] = user.fname
                 session.permanent = True
                 return redirect(url_for('home'))
-            
             flash('Invalid email or password', 'error')
         return render_template('signin.html')
 
@@ -79,7 +77,6 @@ def create_app(config_name='default'):
             lname = request.form['lname']
             email = request.form['email']
             password = request.form['password']
-            
             if User.query.filter_by(email=email).first():
                 flash('Email already exists', 'error')
                 return redirect(url_for('signup'))
@@ -90,12 +87,11 @@ def create_app(config_name='default'):
             flash('Registration successful! Please sign in.', 'success')
             return redirect(url_for('signin'))
         return render_template('signup.html')
-        return render_template('simulation.html')
 
     return app
 
 if __name__ == '__main__':
-    app = create_app(os.getenv('FLASK_CONFIG', 'development'))
-    with app.app_context():
+    flask_app = create_app(os.getenv('FLASK_CONFIG', 'development'))
+    with flask_app.app_context():
         db.create_all()
-    app.run()
+    flask_app.run()
