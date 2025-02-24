@@ -3,8 +3,8 @@
 from functools import wraps
 try:
     from flask import session, redirect, url_for
-except ImportError:
-    raise ImportError("Please install Flask using: pip install -r requirements.txt")
+except ImportError as exc:
+    raise ImportError("Please install Flask using: pip install -r requirements.txt") from exc
 
 def login_required(f):
     """Decorator to check if user is logged in."""

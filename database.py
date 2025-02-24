@@ -2,8 +2,8 @@
 
 try:
     from flask import Flask, render_template
-except ImportError:
-    raise ImportError("Please install Flask using: pip install -r requirements.txt")
+except ImportError as exc:
+    raise ImportError("Please install Flask using: pip install -r requirements.txt") from exc
 
 app = Flask(__name__)
 
