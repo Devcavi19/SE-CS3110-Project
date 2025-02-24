@@ -1,6 +1,9 @@
 """Database module for the application."""
 
-from flask import Flask, render_template
+try:
+    from flask import Flask, render_template
+except ImportError:
+    raise ImportError("Please install Flask using: pip install -r requirements.txt")
 
 app = Flask(__name__)
 
