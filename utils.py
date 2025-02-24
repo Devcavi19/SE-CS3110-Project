@@ -1,5 +1,7 @@
+"""Utilities module for the application."""
+
 from functools import wraps
-from flask import session, redirect, url_for
+from flask import Flask, session, redirect, url_for
 
 def login_required(f):
     """Decorator to check if user is logged in."""
