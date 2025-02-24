@@ -3,7 +3,9 @@
 try:
     from flask_sqlalchemy import SQLAlchemy
 except ImportError as exc:
-    raise ImportError('Please install Flask-SQLAlchemy using: pip install -r requirements.txt') from exc
+    raise ImportError(
+        'Please install Flask-SQLAlchemy using: pip install -r requirements.txt'
+    ) from exc
 
 db = SQLAlchemy()
 
