@@ -15,3 +15,16 @@ class User(db.Model):
     def __repr__(self):
         """Return string representation of the user."""
         return f'<User {self.fname} {self.lname}>'
+
+    def get_full_name(self):
+        """Return user's full name."""
+        return f"{self.fname} {self.lname}"
+
+    def to_dict(self):
+        """Convert user object to dictionary."""
+        return {
+            'id': self.id,
+            'fname': self.fname,
+            'lname': self.lname,
+            'email': self.email
+        }
