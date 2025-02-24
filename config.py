@@ -3,9 +3,11 @@ from datetime import timedelta
 
 class Config:
     """Base configuration."""
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'your_secret_key'  # Should be set in environment variable
+    SECRET_KEY = 'your_secret_key_here'
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=30)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DEBUG = False
+    TESTING = False
 
 class DevelopmentConfig(Config):
     """Development configuration."""
