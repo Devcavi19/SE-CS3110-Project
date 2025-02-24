@@ -7,6 +7,7 @@
   overflow: hidden;
   padding-bottom: 20px;
   margin: auto;
+  margin-top: -50px; /* Move container higher up */
 
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
@@ -16,8 +17,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
   color: #fff;
-  height: 100%; /* Ensure full height of the viewport */
-
+  height: auto; /* Changed from 100% to auto for better control */
 }
 
 .login-field {
@@ -53,7 +53,6 @@
   background: #0056b3;
   transform: scale(1.05); /* Slight zoom effect */
 }
-
 
 .signup-button {
   margin-top: 10px;
