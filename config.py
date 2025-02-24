@@ -2,7 +2,9 @@
 
 import os
 from datetime import timedelta
+from dataclasses import dataclass
 
+@dataclass
 class Config:
     """Base configuration."""
     SECRET_KEY = 'your_secret_key_here'
@@ -11,11 +13,13 @@ class Config:
     DEBUG = False
     TESTING = False
 
+@dataclass
 class DevelopmentConfig(Config):
     """Development configuration."""
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'sqlite:///users.db'
 
+@dataclass
 class ProductionConfig(Config):
     """Production configuration."""
     DEBUG = False
