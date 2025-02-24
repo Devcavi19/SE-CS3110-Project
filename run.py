@@ -1,9 +1,12 @@
 """Main module to run the application."""
 
 import os
-from functools import wraps
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from werkzeug.security import generate_password_hash, check_password_hash
+try:
+    from flask import Flask, render_template, request, redirect, url_for, flash, session
+    from werkzeug.security import generate_password_hash, check_password_hash
+except ImportError:
+    raise ImportError("Please install required packages using: pip install -r requirements.txt")
+
 from models import db, User
 from config import config
 
